@@ -40,7 +40,7 @@ Pod:
     kubectl apply -f https://k8s.io/examples/pods/inject/envars.yaml
     ```
 
-1. List the running Pods:
+2. List the running Pods:
 
     ```shell
     kubectl get pods -l purpose=demonstrate-envars
@@ -53,13 +53,13 @@ Pod:
     envar-demo      1/1       Running   0          9s
     ```
 
-1. Get a shell to the container running in your Pod:
+3. Get a shell to the container running in your Pod:
 
     ```shell
     kubectl exec -it envar-demo -- /bin/bash
     ```
 
-1. In your shell, run the `printenv` command to list the environment variables.
+4. In your shell, run the `printenv` command to list the environment variables.
 
     ```shell
     root@envar-demo:/# printenv
@@ -76,7 +76,7 @@ Pod:
     DEMO_FAREWELL=Such a sweet sorrow
     ```
 
-1. To exit the shell, enter `exit`.
+5. To exit the shell, enter `exit`.
 
 {{< note >}}
 The environment variables set using the `env` or `envFrom` field
